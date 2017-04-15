@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/leizhang/ontologies/2017/3/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/leizhang/ontologies/2017/3/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Administrator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Administrator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_Department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Consultation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Consultation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Consulting_Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Consulting_Room">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Female">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gender"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gender"/>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Hospital is an institution in which sick or injured persons are given medical or surgical treatment.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Hospital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Male">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gender"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Speciality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Speciality"/>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mix_Gender_Ward -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mix_Gender_Ward">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Neonatal_Intensive_Care_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Neonatal_Intensive_Care_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Office -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Office">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operating_Theatre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operating_Theatre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Out-Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Out-Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Physician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Physician">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Radiologist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Radiologist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Surgeon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Surgeon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr_Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Queen_Alexandra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Queen_Alexandra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_mixgenderward001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_mixgenderward001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mix_Gender_Ward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_normalward001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_normalward001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_normalward002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_normalward002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
