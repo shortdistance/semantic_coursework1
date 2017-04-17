@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1492259092638" name="http://www.owl-ontologies.com/Hospital.rdf" uri="workspace/Hospital-RDF-Ontology-master/Hospital3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1492259092638" name="http://www.pizza.com/ontologies/pizza.owl" uri="Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6d49654f0b9332706c7d885add288648/Message/MessageTemp/4b1dffadebdfe555c9d7e02b237c5801/File/Pizza.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1492259092638" name="http://www.semanticweb.org/leizhang/ontologies/2017/3/untitled-ontology-3" uri="hospital.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1492371428493" name="http://www.semanticweb.org/leizhang/ontologies/2017/3/untitled-ontology-3" uri="hospital.owl"/>
     </group>
 </catalog>
