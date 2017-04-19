@@ -1,0 +1,61 @@
+Queries
+• Which members of medical staff work in the cardiology department?
+
+PREFIX hospital: <http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#>
+select ?personId ?personName ?personGender ?personAddress
+where {
+   ?medicalstaff hospital:staffIsInDepartment ?Department .
+   ?Department hospital:departmentName "Cardiology" .
+   ?medicalstaff hospital:personId ?personId .
+   ?medicalstaff hospital:personName ?personName .
+   ?medicalstaff hospital:personGender ?personGender .
+   ?medicalstaff hospital:personAddress ?personAddress .
+}
+
+
+• How many beds are in the neonatal intensive care unit?
+
+PREFIX hospital: <http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+select  (count(distinct ?bed) as ?count)
+where {
+	?bed hospital:bedIsInWard ?ward .
+   ?ward rdf:type hospital:Neonatal_Intensive_Care_Unit .
+}
+
+
+• Which members of medical staff carried out Mr. Smith’s operation?
+
+PREFIX hospital: <http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#>
+select  ?medical_staff
+where {
+   ?operation hospital:operationOnPatient ?patient .
+   ?patient hospital:personName 'Smith' .
+   ?operation hospital:operationNeedMedicalStaff ?medical_staff .
+}
+
+
+• Which departments have staff based in the Queen Alexandra building?
+
+PREFIX hospital: <http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+select  ?department
+where {
+  	?department rdf:type hospital:Hospital_Department .
+   ?department hospital:departmentIsInBuilding ?building .
+	?building 	hospital:buildingHasName 'Queen Alexandra' .
+}
+
+
+• What surgical procedures did Mr. Jones carry out on the 23rd May 2016?
+
+PREFIX hospital: <http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+select  ?operation ?operationId ('2016-05-23' as ?operationDate) ?operationMedicalStaff
+where {
+   ?operation hospital:operationNeedMedicalStaff ?doctor . 
+   ?doctor hospital:personName 'Jones' .
+   ?operation hospital:operationDate '2016-05-23' .
+   ?operation hospital:operationId ?operationId .
+   ?operation hospital:operationNeedMedicalStaff ?operationMedicalStaff .
+}
