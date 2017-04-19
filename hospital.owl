@@ -6,7 +6,6 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:Hospital="http://www.owl-ontologies.com/Hospital.rdf#"
      xmlns:hospital="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital">
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lei Zhang
@@ -176,15 +175,6 @@ lz5y15@soton.ac.uk</rdfs:comment>
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
-    </rdf:Description>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -193,36 +183,6 @@ lz5y15@soton.ac.uk</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.owl-ontologies.com/Hospital.rdf#departmentHasName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Hospital.rdf#departmentHasName">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Hospital.rdf#patientAge -->
-
-    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Hospital.rdf#patientAge">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Hospital.rdf#patientWeight -->
-
-    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Hospital.rdf#patientWeight">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -276,6 +236,16 @@ lz5y15@soton.ac.uk</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#departmentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#departmentName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#infrastrctureHasId -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#infrastrctureHasId">
@@ -302,6 +272,16 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
@@ -872,9 +852,8 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Anaesthetics">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002"/>
-        <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaesthetics</Hospital:departmentHasName>
         <hospital:departmentContactPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07926273828</hospital:departmentContactPhone>
-        <hospital:infrastrctureHasId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department_1002</hospital:infrastrctureHasId>
+        <hospital:departmentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaesthetics</hospital:departmentName>
     </owl:NamedIndividual>
     
 
@@ -884,9 +863,8 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001"/>
-        <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiology</Hospital:departmentHasName>
         <hospital:departmentContactPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07926273827</hospital:departmentContactPhone>
-        <hospital:infrastrctureHasId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department_1001</hospital:infrastrctureHasId>
+        <hospital:departmentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiology</hospital:departmentName>
     </owl:NamedIndividual>
     
 
@@ -896,9 +874,8 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_DiagnosticImaging">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002"/>
-        <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dianostic Imaging</Hospital:departmentHasName>
         <hospital:departmentContactPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07926273829</hospital:departmentContactPhone>
-        <hospital:infrastrctureHasId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department_1003</hospital:infrastrctureHasId>
+        <hospital:departmentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic Imaging</hospital:departmentName>
     </owl:NamedIndividual>
     
 
@@ -908,9 +885,8 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001"/>
-        <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Surgery</Hospital:departmentHasName>
         <hospital:departmentContactPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07926273830</hospital:departmentContactPhone>
-        <hospital:infrastrctureHasId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department_004</hospital:infrastrctureHasId>
+        <hospital:departmentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Surgery</hospital:departmentName>
     </owl:NamedIndividual>
     
 
@@ -920,9 +896,8 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003"/>
-        <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gynaecology</Hospital:departmentHasName>
         <hospital:departmentContactPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07926273831</hospital:departmentContactPhone>
-        <hospital:infrastrctureHasId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department_005</hospital:infrastrctureHasId>
+        <hospital:departmentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gynaecology</hospital:departmentName>
     </owl:NamedIndividual>
     
 
@@ -1129,8 +1104,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <hospital:patientHasOperation rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation001"/>
         <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</Hospital:patientAge>
-        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100kg</Hospital:patientWeight>
+        <hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">26</hospital:patientAge>
         <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-20T09:12:00</hospital:patientDatetimeAdmitted>
         <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">189cm</hospital:patientHeight>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 087, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
@@ -1148,8 +1122,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_operated_on_by_Mr.Jones"/>
         <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</Hospital:patientAge>
-        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80kg</Hospital:patientWeight>
+        <hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</hospital:patientAge>
         <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-24T11:01:00</hospital:patientDatetimeAdmitted>
         <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">161cm</hospital:patientHeight>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 233, Crescent Place, BO15 0SY, Southampton,UK</hospital:personAddress>
@@ -1167,8 +1140,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_patient"/>
         <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</Hospital:patientAge>
-        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60kg</Hospital:patientWeight>
+        <hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">28</hospital:patientAge>
         <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-30T13:50:00</hospital:patientDatetimeAdmitted>
         <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">173cm</hospital:patientHeight>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room1021, Crescent place, BO14 0BH, Southampton,UK</hospital:personAddress>
@@ -1187,8 +1159,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <hospital:patientHasOperation rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation002"/>
         <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</Hospital:patientAge>
-        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110kg</Hospital:patientWeight>
+        <hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">29</hospital:patientAge>
         <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-01T15:23:00</hospital:patientDatetimeAdmitted>
         <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200cm</hospital:patientHeight>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 176, Crescent Place, BO13 0YU, Southampton, UK</hospital:personAddress>
@@ -1206,8 +1177,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology_patient"/>
         <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</Hospital:patientAge>
-        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70kg</Hospital:patientWeight>
+        <hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</hospital:patientAge>
         <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-02-23T09:00:00</hospital:patientDatetimeAdmitted>
         <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">164cm</hospital:patientHeight>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 434, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
@@ -1226,8 +1196,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <hospital:patientHasOperation rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation003"/>
         <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">28</Hospital:patientAge>
-        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81kg</Hospital:patientWeight>
+        <hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">31</hospital:patientAge>
         <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-02-03T12:00:00</hospital:patientDatetimeAdmitted>
         <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">171cm</hospital:patientHeight>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 991, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
