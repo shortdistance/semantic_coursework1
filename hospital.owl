@@ -23,6 +23,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedIsInRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedIsInRoom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Room"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient">
@@ -49,22 +59,22 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationIsOperatedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationIsOperatedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationNeedMedicalStaff -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationNeedMedicalStaff">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Staff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationOnPatient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationOnPatient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
     </owl:ObjectProperty>
     
 
@@ -200,7 +210,7 @@
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Hospital.rdf#patientWeight">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -209,6 +219,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#HospitalAddress">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -217,6 +229,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#HospitalName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -225,16 +239,35 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#HospitalPhone">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedSize -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#appintmentHasDatetime -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedSize">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#appintmentHasDatetime">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#appintmentHasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#appintmentHasDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#appintmentHasId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#appintmentHasId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -243,6 +276,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#buildingHasName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -267,12 +302,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientDatetimeAdmitted -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientDatetimeAdmitted">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -282,7 +333,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientHeight">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -292,7 +343,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientdatetimeDischarged">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -362,7 +413,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomSize">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Room"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -382,6 +433,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Administrator">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Staff"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Administrator</rdfs:label>
     </owl:Class>
     
 
@@ -402,6 +454,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Non_Anaesthetic_Operation"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Anaesthetic Operation</rdfs:label>
     </owl:Class>
     
 
@@ -410,13 +463,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetist">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Anaesthetist</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment"/>
     
 
 
@@ -424,6 +472,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bed</rdfs:label>
     </owl:Class>
     
 
@@ -432,6 +481,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Buiding</rdfs:label>
     </owl:Class>
     
 
@@ -440,6 +490,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiologist">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Cardiologist</rdfs:label>
     </owl:Class>
     
 
@@ -450,15 +501,16 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientIsInDepartment"/>
-                        <owl:hasValue rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Cardiology Patient</rdfs:label>
     </owl:Class>
     
 
@@ -470,22 +522,19 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_patient"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomHasBeds"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_patient"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomHasBeds"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Cardiology Patients Ward</rdfs:label>
     </owl:Class>
     
 
@@ -494,6 +543,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Consultation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Consultation</rdfs:label>
     </owl:Class>
     
 
@@ -502,6 +552,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Consulting_Room">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Room"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Consulting Room</rdfs:label>
     </owl:Class>
     
 
@@ -510,6 +561,47 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Staff"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Doctor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery_patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery_patient">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientIsInDepartment"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">General Surgery Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology_patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology_patient">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientIsInDepartment"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Gynaecology Patient</rdfs:label>
     </owl:Class>
     
 
@@ -525,7 +617,10 @@
 
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The departments of the hospital</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Department</rdfs:label>
+    </owl:Class>
     
 
 
@@ -533,25 +628,33 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">In-Patitent</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The Infrastrructure of a hospital, including Buidings, Rooms, Beds.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Infrastructure</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure">
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Medical Procedure</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Speciality -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Speciality"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Speciality">
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Medical Speciality</rdfs:label>
+    </owl:Class>
     
 
 
@@ -559,6 +662,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Staff">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Staff"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Medical Staff</rdfs:label>
     </owl:Class>
     
 
@@ -571,37 +675,30 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
                     <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Class>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personGender"/>
-                                                <owl:hasValue>Female</owl:hasValue>
-                                            </owl:Restriction>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personGender"/>
-                                                <owl:hasValue>Male</owl:hasValue>
-                                            </owl:Restriction>
-                                        </owl:unionOf>
-                                    </owl:Class>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomHasBeds"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personGender"/>
+                                <owl:hasValue>Female</owl:hasValue>
                             </owl:Restriction>
-                        </owl:intersectionOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personGender"/>
+                                <owl:hasValue>Male</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
                     </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomHasBeds"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Mix Gender Ward</rdfs:label>
     </owl:Class>
     
 
@@ -610,6 +707,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Neonatal_Intensive_Care_Unit">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Neonatal Intensive Care Unit</rdfs:label>
     </owl:Class>
     
 
@@ -617,7 +715,23 @@
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Non_Anaesthetic_Operation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Non_Anaesthetic_Operation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationNeedMedicalStaff"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetist"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Non-Anaesthetic Operation</rdfs:label>
     </owl:Class>
     
 
@@ -626,6 +740,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Normal Ward</rdfs:label>
     </owl:Class>
     
 
@@ -634,6 +749,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Staff"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nurse</rdfs:label>
     </owl:Class>
     
 
@@ -642,6 +758,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Office">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Room"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Office</rdfs:label>
     </owl:Class>
     
 
@@ -650,6 +767,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operating_Theatre">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Room"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Operating Theatre</rdfs:label>
     </owl:Class>
     
 
@@ -658,6 +776,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Medical_Procedure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Operation</rdfs:label>
     </owl:Class>
     
 
@@ -666,6 +785,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Out-Patient">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Out-Patient</rdfs:label>
     </owl:Class>
     
 
@@ -674,6 +794,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Patient</rdfs:label>
     </owl:Class>
     
 
@@ -681,33 +802,16 @@
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_operated_on_by_Mr.Jones -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_operated_on_by_Mr.Jones">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientHasOperation"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationIsOperatedBy"/>
-                                <owl:hasValue rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Jones"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery_patient"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person">
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Person</rdfs:label>
+    </owl:Class>
     
 
 
@@ -715,6 +819,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Radiologist">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Radiologist</rdfs:label>
     </owl:Class>
     
 
@@ -723,6 +828,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Room">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Infrastructure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Room</rdfs:label>
     </owl:Class>
     
 
@@ -731,6 +837,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Staff">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Person"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Staff</rdfs:label>
     </owl:Class>
     
 
@@ -739,6 +846,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Surgeon">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Surgeon</rdfs:label>
     </owl:Class>
     
 
@@ -755,6 +863,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#gynecologist">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Gynecologist</rdfs:label>
     </owl:Class>
     
 
@@ -770,9 +879,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetics -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Anaesthetics -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetics">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Anaesthetics">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002"/>
         <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaesthetics</Hospital:departmentHasName>
@@ -782,33 +891,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment001 -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment001">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment002 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment002">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment003 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment003">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Appointment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001"/>
         <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiology</Hospital:departmentHasName>
@@ -818,9 +903,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#DiagnosticImaging -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_DiagnosticImaging -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#DiagnosticImaging">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_DiagnosticImaging">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002"/>
         <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dianostic Imaging</Hospital:departmentHasName>
@@ -830,9 +915,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
         <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001"/>
         <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Surgery</Hospital:departmentHasName>
@@ -842,11 +927,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Hospital_Department"/>
-        <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Queen_Alexandra"/>
+        <hospital:departmentIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003"/>
         <Hospital:departmentHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gynaecology</Hospital:departmentHasName>
         <hospital:departmentContactPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07926273831</hospital:departmentContactPhone>
         <hospital:infrastrctureHasId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department_005</hospital:infrastrctureHasId>
@@ -854,12 +939,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Alfred -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Alfred -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Alfred">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Alfred">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiologist"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 089,crescent place, SO14 0BH, Southampton,United Kindom</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiologist_001</hospital:personId>
@@ -869,12 +954,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.David -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.David -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.David">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.David">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Radiologist"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#DiagnosticImaging"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_DiagnosticImaging"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 001, crescent place, BO14 0BH, Southampton,UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radiologist_001</hospital:personId>
@@ -884,12 +969,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Jones -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Jones -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Jones">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Jones">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Surgeon"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room002, Crescent Place, BO14 0BH, Southampton, UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surgeon_001</hospital:personId>
@@ -899,12 +984,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Peter -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Peter -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Peter">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Peter">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetist"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetics"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Anaesthetics"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room005, Crescent Place, SO14 0BH, Southampton,UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaesthetist_001</hospital:personId>
@@ -914,12 +999,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Raymond -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Raymond -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Raymond">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Raymond">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#gynecologist"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 006, Crescent Place, BO14 0BH, Southampton, UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gynecologist_001</hospital:personId>
@@ -929,21 +1014,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Smith -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Ava -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mr.Smith">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#In-Patient"/>
-        <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mrs.Ava -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mrs.Ava">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Ava">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiologist"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 008, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiologist_002</hospital:personId>
@@ -953,12 +1029,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mrs.Crystal -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Crystal -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mrs.Crystal">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Crystal">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Radiologist"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#DiagnosticImaging"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_DiagnosticImaging"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room011, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radiologist_002</hospital:personId>
@@ -968,12 +1044,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mrs.Jane -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Jane -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mrs.Jane">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Jane">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetist"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetics"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Anaesthetics"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 012,Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaesthetist_002</hospital:personId>
@@ -983,12 +1059,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mrs.Ruby -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Ruby -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mrs.Ruby">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Ruby">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#gynecologist"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 031, Crescent Place, BO14 0BH, Southampton, UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gynecologist_002</hospital:personId>
@@ -998,12 +1074,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ms.Anna -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Ms.Anna -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ms.Anna">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Ms.Anna">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Surgeon"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 091, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
         <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surgeon_002</hospital:personId>
@@ -1013,42 +1089,164 @@
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ms.Ella -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Ella -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ms.Ella">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Ella">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 099, Crescent Place,BO14 0BH, Southampton,UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
-        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiology_Nurse_001</hospital:personId>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nurse_001</hospital:personId>
         <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ella</hospital:personName>
         <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 13510361036</hospital:personPhone>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ms.Julia -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Hanna -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ms.Julia">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Hanna">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse"/>
         <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
+        <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 022, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
+        <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nurse_002</hospital:personId>
+        <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hanna</hospital:personName>
+        <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 023 80661278</hospital:personPhone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Julia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Julia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse"/>
+        <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
+        <hospital:staffIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
         <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room100, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
         <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
-        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeneralSurgery_Nurse_002</hospital:personId>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nurse_003</hospital:personId>
         <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julia</hospital:personName>
         <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 13810381038</hospital:personPhone>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Queen_Alexandra -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Bruce -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Queen_Alexandra">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
-        <hospital:buildingIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:buildingHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen Alexandra</hospital:buildingHasName>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Bruce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#GeneralSurgery_patient"/>
+        <hospital:patientHasOperation rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation001"/>
+        <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
+        <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
+        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</Hospital:patientAge>
+        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100kg</Hospital:patientWeight>
+        <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/20/2017 09:12</hospital:patientDatetimeAdmitted>
+        <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">189cm</hospital:patientHeight>
+        <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 087, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
+        <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient_001</hospital:personId>
+        <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruce</hospital:personName>
+        <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 13554667865</hospital:personPhone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Bruno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Bruno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_operated_on_by_Mr.Jones"/>
+        <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
+        <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
+        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</Hospital:patientAge>
+        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80kg</Hospital:patientWeight>
+        <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12/24/2016 11:01</hospital:patientDatetimeAdmitted>
+        <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">161cm</hospital:patientHeight>
+        <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 233, Crescent Place, BO15 0SY, Southampton,UK</hospital:personAddress>
+        <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient_002</hospital:personId>
+        <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruno</hospital:personName>
+        <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 13877663421</hospital:personPhone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Joe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Joe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_patient"/>
+        <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
+        <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
+        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</Hospital:patientAge>
+        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60kg</Hospital:patientWeight>
+        <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/30/2016 13:50</hospital:patientDatetimeAdmitted>
+        <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">173cm</hospital:patientHeight>
+        <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room1021, Crescent place, BO14 0BH, Southampton,UK</hospital:personAddress>
+        <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient_003</hospital:personId>
+        <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe</hospital:personName>
+        <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 13312341234</hospital:personPhone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_patient"/>
+        <hospital:patientHasOperation rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation002"/>
+        <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
+        <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
+        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</Hospital:patientAge>
+        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110kg</Hospital:patientWeight>
+        <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11/1/2016 15:23</hospital:patientDatetimeAdmitted>
+        <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200cm</hospital:patientHeight>
+        <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 176, Crescent Place, BO13 0YU, Southampton, UK</hospital:personAddress>
+        <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hospital:personGender>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient_004</hospital:personId>
+        <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</hospital:personName>
+        <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 13110234323</hospital:personPhone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mrs.Alex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mrs.Alex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology_patient"/>
+        <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
+        <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
+        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</Hospital:patientAge>
+        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70kg</Hospital:patientWeight>
+        <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2/23/2017 9:00</hospital:patientDatetimeAdmitted>
+        <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">164cm</hospital:patientHeight>
+        <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 434, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
+        <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient_005</hospital:personId>
+        <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex</hospital:personName>
+        <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 177 12093242</hospital:personPhone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mrs.Maggie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mrs.Maggie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Gynaecology_patient"/>
+        <hospital:patientHasOperation rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation003"/>
+        <hospital:patientIsInDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
+        <hospital:personIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
+        <Hospital:patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">28</Hospital:patientAge>
+        <Hospital:patientWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81kg</Hospital:patientWeight>
+        <hospital:patientDatetimeAdmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2/3/2017 12:00</hospital:patientDatetimeAdmitted>
+        <hospital:patientHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">171cm</hospital:patientHeight>
+        <hospital:personAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room 991, Crescent Place, BO14 0BH, Southampton,UK</hospital:personAddress>
+        <hospital:personGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hospital:personGender>
+        <hospital:personId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient_006</hospital:personId>
+        <hospital:personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maggie</hospital:personName>
+        <hospital:personPhone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+86 17767879834</hospital:personPhone>
     </owl:NamedIndividual>
     
 
@@ -1068,28 +1266,84 @@ SO16 6YD</hospital:HospitalAddress>
     
 
 
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward001_in_building001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward001_in_building001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward001_in_building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward001_in_building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building003"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward002_in_building001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward002_in_building001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward002_in_building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward002_in_building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building003"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward004_in_building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward004_in_building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward004_in_building003"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed002_in_ward001_in_building002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed002_in_ward001_in_building002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed002_in_ward002_in_building002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed002_in_ward002_in_building002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed002_in_ward003_in_building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed002_in_ward003_in_building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward003_in_building003"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
         <hospital:buildingIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:buildingHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building001</hospital:buildingHasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_ward001 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_ward001">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_ward002 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001_ward002">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward"/>
+        <hospital:buildingHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayo Eugenio</hospital:buildingHasName>
     </owl:NamedIndividual>
     
 
@@ -1099,23 +1353,158 @@ SO16 6YD</hospital:HospitalAddress>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
         <hospital:buildingIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
-        <hospital:buildingHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building002</hospital:buildingHasName>
+        <hospital:buildingHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saint Marys</hospital:buildingHasName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002_ward001 -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002_ward001">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Building"/>
+        <hospital:buildingIsInHospital rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Southampton_General_Hospital"/>
+        <hospital:buildingHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen Alexandra</hospital:buildingHasName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002_ward002 -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation001 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002_ward002">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetic_Operation"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Jones"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Peter"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Ms.Anna"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Julia"/>
+        <hospital:operationOnPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Bruce"/>
+        <hospital:operationDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-23T09:00:00</hospital:operationDateTime>
+        <hospital:operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation_001</hospital:operationId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetic_Operation"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Alfred"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Ava"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Jane"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Ella"/>
+        <hospital:operationOnPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Smith"/>
+        <hospital:operationDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-07-23T11:00:00</hospital:operationDateTime>
+        <hospital:operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation_002</hospital:operationId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operation003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Anaesthetic_Operation"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Peter"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mr.Raymond"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Ruby"/>
+        <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Hanna"/>
+        <hospital:operationOnPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mrs.Maggie"/>
+        <hospital:operationDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-09-11T13:00:00</hospital:operationDateTime>
+        <hospital:operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation_002</hospital:operationId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building001">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward"/>
+        <hospital:roomIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001"/>
+        <hospital:roomIsUsedByDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
+        <hospital:roomBedsNum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hospital:roomBedsNum>
+        <hospital:roomSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30 square meters</hospital:roomSize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Neonatal_Intensive_Care_Unit"/>
+        <hospital:roomIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002"/>
+        <hospital:roomIsUsedByDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
+        <hospital:roomBedsNum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hospital:roomBedsNum>
+        <hospital:roomSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100 square meters</hospital:roomSize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mix_Gender_Ward"/>
+        <hospital:roomIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003"/>
+        <hospital:roomIsUsedByDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
+        <hospital:roomBedsNum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hospital:roomBedsNum>
+        <hospital:roomSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30 square meters</hospital:roomSize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Normal_Ward"/>
+        <hospital:roomIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building001"/>
+        <hospital:roomIsUsedByDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_GeneralSurgery"/>
+        <hospital:roomBedsNum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hospital:roomBedsNum>
+        <hospital:roomSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20 square meters</hospital:roomSize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Neonatal_Intensive_Care_Unit"/>
+        <hospital:roomIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building002"/>
+        <hospital:roomIsUsedByDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Gynaecology"/>
+        <hospital:roomBedsNum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hospital:roomBedsNum>
+        <hospital:roomSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 square meters</hospital:roomSize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mix_Gender_Ward"/>
+        <hospital:roomIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003"/>
+        <hospital:roomIsUsedByDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
+        <hospital:roomBedsNum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hospital:roomBedsNum>
+        <hospital:roomSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40 square meters</hospital:roomSize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward003_in_building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward003_in_building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_patients_ward"/>
+        <hospital:roomIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003"/>
+        <hospital:roomIsUsedByDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
+        <hospital:roomBedsNum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hospital:roomBedsNum>
+        <hospital:roomSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50 square meter</hospital:roomSize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward004_in_building003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward004_in_building003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Cardiology_patients_ward"/>
+        <hospital:roomIsInBuilding rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#building003"/>
+        <hospital:roomIsUsedByDepartment rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Cardiology"/>
+        <hospital:roomBedsNum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hospital:roomBedsNum>
+        <hospital:roomSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25 square meters</hospital:roomSize>
     </owl:NamedIndividual>
 </rdf:RDF>
 
