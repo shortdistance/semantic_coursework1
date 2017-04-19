@@ -672,29 +672,29 @@
     <owl:Class rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Mix_Gender_Ward">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+                <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomHasBeds"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
+                            </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personGender"/>
                                 <owl:hasValue>Female</owl:hasValue>
                             </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personGender"/>
-                                <owl:hasValue>Male</owl:hasValue>
-                            </owl:Restriction>
-                        </owl:unionOf>
+                        </owl:intersectionOf>
                     </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personGender"/>
+                        <owl:hasValue>Male</owl:hasValue>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomHasBeds"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
+                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Ward"/>
@@ -1271,6 +1271,7 @@ SO16 6YD</hospital:HospitalAddress>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward001_in_building001">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
         <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building001"/>
+        <hospital:bedOccupiedByPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Bruce"/>
     </owl:NamedIndividual>
     
 
@@ -1280,6 +1281,7 @@ SO16 6YD</hospital:HospitalAddress>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward001_in_building003">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
         <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building003"/>
+        <hospital:bedOccupiedByPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Joe"/>
     </owl:NamedIndividual>
     
 
@@ -1289,6 +1291,7 @@ SO16 6YD</hospital:HospitalAddress>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward002_in_building001">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
         <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building001"/>
+        <hospital:bedOccupiedByPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Bruno"/>
     </owl:NamedIndividual>
     
 
@@ -1298,15 +1301,7 @@ SO16 6YD</hospital:HospitalAddress>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward002_in_building003">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
         <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building003"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward004_in_building003 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed001_in_ward004_in_building003">
-        <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
-        <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward004_in_building003"/>
+        <hospital:bedOccupiedByPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Smith"/>
     </owl:NamedIndividual>
     
 
@@ -1316,6 +1311,7 @@ SO16 6YD</hospital:HospitalAddress>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed002_in_ward001_in_building002">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
         <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward001_in_building002"/>
+        <hospital:bedOccupiedByPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mrs.Alex"/>
     </owl:NamedIndividual>
     
 
@@ -1325,6 +1321,7 @@ SO16 6YD</hospital:HospitalAddress>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bed002_in_ward002_in_building002">
         <rdf:type rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Bed"/>
         <hospital:bedIsInRoom rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#ward002_in_building002"/>
+        <hospital:bedOccupiedByPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mrs.Maggie"/>
     </owl:NamedIndividual>
     
 
