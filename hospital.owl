@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#"
-     xml:base="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital"
+<rdf:RDF xmlns="http://www.semanticweb.org/leizhang/ontologies/2017/3/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/leizhang/ontologies/2017/3/untitled-ontology-3"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Hospital="http://www.owl-ontologies.com/Hospital.rdf#"
      xmlns:hospital="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital">
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lei Zhang
@@ -256,12 +257,12 @@ lz5y15@soton.ac.uk</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationDateTime -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationDate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationDateTime">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationDate">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Operation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -1331,7 +1332,7 @@ SO16 6YD</hospital:HospitalAddress>
         <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Ms.Anna"/>
         <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Julia"/>
         <hospital:operationOnPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Bruce"/>
-        <hospital:operationDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-23T09:00:00</hospital:operationDateTime>
+        <hospital:operationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-05-23</hospital:operationDate>
         <hospital:operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation_001</hospital:operationId>
     </owl:NamedIndividual>
     
@@ -1346,7 +1347,7 @@ SO16 6YD</hospital:HospitalAddress>
         <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Jane"/>
         <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Ella"/>
         <hospital:operationOnPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mr.Smith"/>
-        <hospital:operationDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-23T11:00:00</hospital:operationDateTime>
+        <hospital:operationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-07-23</hospital:operationDate>
         <hospital:operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation_002</hospital:operationId>
     </owl:NamedIndividual>
     
@@ -1361,7 +1362,7 @@ SO16 6YD</hospital:HospitalAddress>
         <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Doctor_Mrs.Ruby"/>
         <hospital:operationNeedMedicalStaff rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Nurse_Ms.Hanna"/>
         <hospital:operationOnPatient rdf:resource="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Patient_Mrs.Maggie"/>
-        <hospital:operationDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-11T13:00:00</hospital:operationDateTime>
+        <hospital:operationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-09-11</hospital:operationDate>
         <hospital:operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation_002</hospital:operationId>
     </owl:NamedIndividual>
     
