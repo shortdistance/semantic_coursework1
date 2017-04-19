@@ -8,7 +8,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:Hospital="http://www.owl-ontologies.com/Hospital.rdf#"
      xmlns:hospital="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lei Zhang
+lz5y15@soton.ac.uk</rdfs:comment>
+    </owl:Ontology>
     
 
 
