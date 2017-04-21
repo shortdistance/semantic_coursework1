@@ -5,7 +5,7 @@ PREFIX hospital: <http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital
 select ?personId ?personName ?personGender ?personAddress
 where {
    ?medicalstaff hospital:staffIsInDepartment ?Department .
-   ?Department hospital:departmentName "Cardiology" .
+   ?Department hospital:departmentName "Cardiology"^^xsd:string .
    ?medicalstaff hospital:personId ?personId .
    ?medicalstaff hospital:personName ?personName .
    ?medicalstaff hospital:personGender ?personGender .
@@ -20,7 +20,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 select  (count(distinct ?bed) as ?count)
 where {
 	?bed hospital:bedIsInWard ?ward .
-   ?ward rdf:type hospital:Neonatal_Intensive_Care_Unit .
+	?ward rdf:type hospital:Neonatal_Intensive_Care_Unit .
 }
 
 
@@ -30,7 +30,7 @@ PREFIX hospital: <http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital
 select  ?medical_staff
 where {
    ?operation hospital:operationOnPatient ?patient .
-   ?patient hospital:personName 'Smith' .
+   ?patient hospital:personName "Smith"^^xsd:string .
    ?operation hospital:operationNeedMedicalStaff ?medical_staff .
 }
 
@@ -42,8 +42,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 select  ?department
 where {
   	?department rdf:type hospital:Hospital_Department .
-   ?department hospital:departmentIsInBuilding ?building .
-	?building 	hospital:buildingHasName 'Queen Alexandra' .
+  	?department hospital:departmentIsInBuilding ?building .
+	?building 	hospital:buildingHasName "Queen Alexandra"^^xsd:string .
 }
 
 
@@ -54,8 +54,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 select  ?operation ?operationId ('2016-05-23' as ?operationDate) ?operationMedicalStaff
 where {
    ?operation hospital:operationNeedMedicalStaff ?doctor . 
-   ?doctor hospital:personName 'Jones' .
-   ?operation hospital:operationDate '2016-05-23' .
+   ?doctor hospital:personName "Jones"^^xsd:string .
+   ?operation hospital:operationDate "2016-05-23"^^xsd:string .
    ?operation hospital:operationId ?operationId .
    ?operation hospital:operationNeedMedicalStaff ?operationMedicalStaff .
 }
