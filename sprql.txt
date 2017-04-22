@@ -55,6 +55,7 @@ select  ?operation ?operationId ('2016-05-23' as ?operationDate) ?operationMedic
 where {
    ?operation hospital:operationNeedMedicalStaff ?doctor . 
    ?doctor hospital:personName "Jones"^^xsd:string .
+   ?doctor rdf:type hospital:Surgeon .
    ?operation hospital:operationDate "2016-05-23"^^xsd:string .
    ?operation hospital:operationId ?operationId .
    ?operation hospital:operationNeedMedicalStaff ?operationMedicalStaff .
