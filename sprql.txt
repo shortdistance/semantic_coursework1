@@ -43,7 +43,7 @@ select  ?department
 where {
   	?department rdf:type hospital:Hospital_Department .
   	?department hospital:departmentIsInBuilding ?building .
-	?building 	hospital:buildingHasName "Queen Alexandra"^^xsd:string .
+    ?building 	hospital:buildingHasName "Queen Alexandra"^^xsd:string .
 }
 
 

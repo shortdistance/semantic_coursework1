@@ -67,6 +67,15 @@ lz5y15@soton.ac.uk</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#departmentBasedOnSpeciality -->
+
+    <owl:ObjectProperty rdf:about="&hospital;departmentBasedOnSpeciality">
+        <rdfs:domain rdf:resource="&hospital;Hospital_Department"/>
+        <rdfs:range rdf:resource="&hospital;Medical_Speciality"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#departmentIsInBuilding -->
 
     <owl:ObjectProperty rdf:about="&hospital;departmentIsInBuilding">
@@ -883,12 +892,13 @@ lz5y15@soton.ac.uk</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Anaesthetics -->
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Department_Anesthesiology -->
 
-    <owl:NamedIndividual rdf:about="&hospital;Department_Anaesthetics">
+    <owl:NamedIndividual rdf:about="&hospital;Department_Anesthesiology">
         <rdf:type rdf:resource="&hospital;Hospital_Department"/>
         <departmentContactPhone rdf:datatype="&xsd;string">07926273828</departmentContactPhone>
         <departmentName rdf:datatype="&xsd;string">Anaesthetics</departmentName>
+        <departmentBasedOnSpeciality rdf:resource="&hospital;Speciality_Anesthesiology"/>
         <departmentIsInBuilding rdf:resource="&hospital;building002"/>
     </owl:NamedIndividual>
     
@@ -900,6 +910,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdf:type rdf:resource="&hospital;Hospital_Department"/>
         <departmentContactPhone rdf:datatype="&xsd;string">07926273827</departmentContactPhone>
         <departmentName rdf:datatype="&xsd;string">Cardiology</departmentName>
+        <departmentBasedOnSpeciality rdf:resource="&hospital;Speciality_Cardiology"/>
         <departmentIsInBuilding rdf:resource="&hospital;building001"/>
     </owl:NamedIndividual>
     
@@ -911,6 +922,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdf:type rdf:resource="&hospital;Hospital_Department"/>
         <departmentContactPhone rdf:datatype="&xsd;string">07926273829</departmentContactPhone>
         <departmentName rdf:datatype="&xsd;string">Diagnostic Imaging</departmentName>
+        <departmentBasedOnSpeciality rdf:resource="&hospital;Speciality_DiagnosticImaging"/>
         <departmentIsInBuilding rdf:resource="&hospital;building002"/>
     </owl:NamedIndividual>
     
@@ -922,6 +934,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdf:type rdf:resource="&hospital;Hospital_Department"/>
         <departmentContactPhone rdf:datatype="&xsd;string">07926273830</departmentContactPhone>
         <departmentName rdf:datatype="&xsd;string">General Surgery</departmentName>
+        <departmentBasedOnSpeciality rdf:resource="&hospital;Speciality_GeneralSurgery"/>
         <departmentIsInBuilding rdf:resource="&hospital;building001"/>
     </owl:NamedIndividual>
     
@@ -933,6 +946,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdf:type rdf:resource="&hospital;Hospital_Department"/>
         <departmentContactPhone rdf:datatype="&xsd;string">07926273831</departmentContactPhone>
         <departmentName rdf:datatype="&xsd;string">Gynaecology</departmentName>
+        <departmentBasedOnSpeciality rdf:resource="&hospital;Speciality_Gynaecology"/>
         <departmentIsInBuilding rdf:resource="&hospital;building003"/>
     </owl:NamedIndividual>
     
@@ -992,7 +1006,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <personGender rdf:datatype="&xsd;string">Male</personGender>
         <personName rdf:datatype="&xsd;string">Peter</personName>
         <personAddress rdf:datatype="&xsd;string">Room005, Crescent Place, SO14 0BH, Southampton,UK</personAddress>
-        <staffIsInDepartment rdf:resource="&hospital;Department_Anaesthetics"/>
+        <staffIsInDepartment rdf:resource="&hospital;Department_Anesthesiology"/>
         <personIsInHospital rdf:resource="&hospital;Southampton_General_Hospital"/>
     </owl:NamedIndividual>
     
@@ -1052,7 +1066,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <personGender rdf:datatype="&xsd;string">Female</personGender>
         <personName rdf:datatype="&xsd;string">Jane</personName>
         <personAddress rdf:datatype="&xsd;string">Room 012,Crescent Place, BO14 0BH, Southampton,UK</personAddress>
-        <staffIsInDepartment rdf:resource="&hospital;Department_Anaesthetics"/>
+        <staffIsInDepartment rdf:resource="&hospital;Department_Anesthesiology"/>
         <personIsInHospital rdf:resource="&hospital;Southampton_General_Hospital"/>
     </owl:NamedIndividual>
     
@@ -1255,6 +1269,46 @@ Tremona Road
 Southampton
 Hampshire
 SO16 6YD</HospitalAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Speciality_Anesthesiology -->
+
+    <owl:NamedIndividual rdf:about="&hospital;Speciality_Anesthesiology">
+        <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Speciality_Cardiology -->
+
+    <owl:NamedIndividual rdf:about="&hospital;Speciality_Cardiology">
+        <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Speciality_DiagnosticImaging -->
+
+    <owl:NamedIndividual rdf:about="&hospital;Speciality_DiagnosticImaging">
+        <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Speciality_GeneralSurgery -->
+
+    <owl:NamedIndividual rdf:about="&hospital;Speciality_GeneralSurgery">
+        <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#Speciality_Gynaecology -->
+
+    <owl:NamedIndividual rdf:about="&hospital;Speciality_Gynaecology">
+        <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
     </owl:NamedIndividual>
     
 
