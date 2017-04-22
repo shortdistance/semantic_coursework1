@@ -462,6 +462,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&hospital;Operation"/>
         <owl:disjointWith rdf:resource="&hospital;Non_Anaesthetic_Operation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Anaesthetic Operation</rdfs:comment>
     </owl:Class>
     
 
@@ -480,6 +481,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Bed">
         <rdfs:label rdf:datatype="&rdfs;Literal">Bed</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Infrastructure"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Bed in ward.</rdfs:comment>
     </owl:Class>
     
 
@@ -489,6 +491,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Building">
         <rdfs:label rdf:datatype="&rdfs;Literal">Buiding</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Infrastructure"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Building in the hospital</rdfs:comment>
     </owl:Class>
     
 
@@ -542,6 +545,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&hospital;Ward"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Cardiology Patients Ward</rdfs:comment>
     </owl:Class>
     
 
@@ -551,6 +555,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Consultation">
         <rdfs:label rdf:datatype="&rdfs;Literal">Consultation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Medical_Procedure"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Consultation</rdfs:comment>
     </owl:Class>
     
 
@@ -560,6 +565,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Consulting_Room">
         <rdfs:label rdf:datatype="&rdfs;Literal">Consulting Room</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Room"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Consulting Room</rdfs:comment>
     </owl:Class>
     
 
@@ -653,6 +659,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
 
     <owl:Class rdf:about="&hospital;Medical_Procedure">
         <rdfs:label rdf:datatype="&rdfs;Literal">Medical Procedure</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Medical Procedure </rdfs:comment>
     </owl:Class>
     
 
@@ -661,6 +668,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
 
     <owl:Class rdf:about="&hospital;Medical_Speciality">
         <rdfs:label rdf:datatype="&rdfs;Literal">Medical Speciality</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Medical Speciality</rdfs:comment>
     </owl:Class>
     
 
@@ -706,6 +714,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&hospital;Ward"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Mix Gender Ward</rdfs:comment>
     </owl:Class>
     
 
@@ -715,6 +724,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Neonatal_Intensive_Care_Unit">
         <rdfs:label rdf:datatype="&rdfs;Literal">Neonatal Intensive Care Unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Ward"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Neonatal Intensive Care Unit</rdfs:comment>
     </owl:Class>
     
 
@@ -739,6 +749,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&hospital;Operation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Non-Anaesthetic Operation</rdfs:comment>
     </owl:Class>
     
 
@@ -748,6 +759,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Normal_Ward">
         <rdfs:label rdf:datatype="&rdfs;Literal">Normal Ward</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Ward"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Normal Ward</rdfs:comment>
     </owl:Class>
     
 
@@ -766,6 +778,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Office">
         <rdfs:label rdf:datatype="&rdfs;Literal">Office</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Room"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Office in hospital</rdfs:comment>
     </owl:Class>
     
 
@@ -775,6 +788,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Operating_Theatre">
         <rdfs:label rdf:datatype="&rdfs;Literal">Operating Theatre</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Room"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Operating Theatre in the hospital</rdfs:comment>
     </owl:Class>
     
 
@@ -784,6 +798,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Operation">
         <rdfs:label rdf:datatype="&rdfs;Literal">Operation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Medical_Procedure"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Operation</rdfs:comment>
     </owl:Class>
     
 
@@ -833,6 +848,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
 
     <owl:Class rdf:about="&hospital;Person">
         <rdfs:label rdf:datatype="&rdfs;Literal">Person</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Person in the hospital, including Patient and Staff</rdfs:comment>
     </owl:Class>
     
 
@@ -851,6 +867,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Room">
         <rdfs:label rdf:datatype="&rdfs;Literal">Room</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Infrastructure"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Room in the building of hospital</rdfs:comment>
     </owl:Class>
     
 
@@ -877,6 +894,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
 
     <owl:Class rdf:about="&hospital;Ward">
         <rdfs:subClassOf rdf:resource="&hospital;Room"/>
+        <rdfs:comment rdf:datatype="&xsd;string">ward in the hospital</rdfs:comment>
     </owl:Class>
     
 
