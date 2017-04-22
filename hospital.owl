@@ -416,6 +416,15 @@ lz5y15@soton.ac.uk</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#specialityName -->
+
+    <owl:DatatypeProperty rdf:about="&hospital;specialityName">
+        <rdfs:domain rdf:resource="&hospital;Medical_Speciality"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1277,6 +1286,7 @@ SO16 6YD</HospitalAddress>
 
     <owl:NamedIndividual rdf:about="&hospital;Speciality_Anesthesiology">
         <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+        <specialityName rdf:datatype="&xsd;string">Anesthesiology</specialityName>
     </owl:NamedIndividual>
     
 
@@ -1285,6 +1295,7 @@ SO16 6YD</HospitalAddress>
 
     <owl:NamedIndividual rdf:about="&hospital;Speciality_Cardiology">
         <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+        <specialityName rdf:datatype="&xsd;string">Cardiology</specialityName>
     </owl:NamedIndividual>
     
 
@@ -1293,6 +1304,7 @@ SO16 6YD</HospitalAddress>
 
     <owl:NamedIndividual rdf:about="&hospital;Speciality_DiagnosticImaging">
         <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+        <specialityName rdf:datatype="&xsd;string">Diagnostic Imaging</specialityName>
     </owl:NamedIndividual>
     
 
@@ -1301,6 +1313,7 @@ SO16 6YD</HospitalAddress>
 
     <owl:NamedIndividual rdf:about="&hospital;Speciality_GeneralSurgery">
         <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+        <specialityName rdf:datatype="&xsd;string">General Surgery</specialityName>
     </owl:NamedIndividual>
     
 
@@ -1309,6 +1322,7 @@ SO16 6YD</HospitalAddress>
 
     <owl:NamedIndividual rdf:about="&hospital;Speciality_Gynaecology">
         <rdf:type rdf:resource="&hospital;Medical_Speciality"/>
+        <specialityName rdf:datatype="&xsd;string">Gynaecology</specialityName>
     </owl:NamedIndividual>
     
 
