@@ -6,6 +6,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Hospital "http://www.owl-ontologies.com/Hospital.rdf#" >
     <!ENTITY hospital "http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#" >
 ]>
 
@@ -72,6 +73,15 @@ lz5y15@soton.ac.uk</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Building"/>
         <rdfs:domain rdf:resource="&hospital;Hospital_Department"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationAtRoom -->
+
+    <owl:ObjectProperty rdf:about="&hospital;operationAtRoom">
+        <rdfs:range rdf:resource="&hospital;Operating_Theatre"/>
+        <rdfs:domain rdf:resource="&hospital;Operation"/>
     </owl:ObjectProperty>
     
 
@@ -1359,6 +1369,7 @@ SO16 6YD</HospitalAddress>
         <operationNeedMedicalStaff rdf:resource="&hospital;Doctor_Ms.Anna"/>
         <operationNeedMedicalStaff rdf:resource="&hospital;Nurse_Ms.Julia"/>
         <operationOnPatient rdf:resource="&hospital;Patient_Mr.Bruce"/>
+        <operationAtRoom rdf:resource="&hospital;operationTheatre_001"/>
     </owl:NamedIndividual>
     
 
@@ -1374,6 +1385,7 @@ SO16 6YD</HospitalAddress>
         <operationNeedMedicalStaff rdf:resource="&hospital;Doctor_Mrs.Jane"/>
         <operationNeedMedicalStaff rdf:resource="&hospital;Nurse_Ms.Ella"/>
         <operationOnPatient rdf:resource="&hospital;Patient_Mr.Smith"/>
+        <operationAtRoom rdf:resource="&hospital;operationTheatre_002"/>
     </owl:NamedIndividual>
     
 
@@ -1389,6 +1401,31 @@ SO16 6YD</HospitalAddress>
         <operationNeedMedicalStaff rdf:resource="&hospital;Doctor_Mrs.Ruby"/>
         <operationNeedMedicalStaff rdf:resource="&hospital;Nurse_Ms.Hanna"/>
         <operationOnPatient rdf:resource="&hospital;Patient_Mrs.Maggie"/>
+        <operationAtRoom rdf:resource="&hospital;operationTheatre_003"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationTheatre_001 -->
+
+    <owl:NamedIndividual rdf:about="&hospital;operationTheatre_001">
+        <rdf:type rdf:resource="&hospital;Operating_Theatre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationTheatre_002 -->
+
+    <owl:NamedIndividual rdf:about="&hospital;operationTheatre_002">
+        <rdf:type rdf:resource="&hospital;Operating_Theatre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationTheatre_003 -->
+
+    <owl:NamedIndividual rdf:about="&hospital;operationTheatre_003">
+        <rdf:type rdf:resource="&hospital;Operating_Theatre"/>
     </owl:NamedIndividual>
     
 
