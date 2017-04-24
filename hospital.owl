@@ -20,8 +20,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:hospital="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital">
-        <rdfs:comment rdf:datatype="&rdfs;Literal">Lei Zhang
-lz5y15@soton.ac.uk</rdfs:comment>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">by Lei Zhang (lz5y15@soton.ac.uk)</rdfs:comment>
     </owl:Ontology>
     
 
@@ -40,6 +39,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedIsInWard -->
 
     <owl:ObjectProperty rdf:about="&hospital;bedIsInWard">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to know a bed is in which ward.
+Domain:Bed
+Range:Ward</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Bed"/>
         <rdfs:range rdf:resource="&hospital;Ward"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -50,6 +52,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#bedOccupiedByPatient -->
 
     <owl:ObjectProperty rdf:about="&hospital;bedOccupiedByPatient">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to know a bed occupied by which patient.
+Domain:Bed
+Range:Patient</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Bed"/>
         <rdfs:range rdf:resource="&hospital;Patient"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -60,6 +65,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#buildingIsInHospital -->
 
     <owl:ObjectProperty rdf:about="&hospital;buildingIsInHospital">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to know a building in which hospital.
+Domain: Building
+Range:Hospital</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Building"/>
         <rdfs:range rdf:resource="&hospital;Hospital"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -70,6 +78,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#departmentBasedOnSpeciality -->
 
     <owl:ObjectProperty rdf:about="&hospital;departmentBasedOnSpeciality">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a department based on  which medical speciality.
+Domain: Department
+Range:Medical Speciality</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Hospital_Department"/>
         <rdfs:range rdf:resource="&hospital;Medical_Speciality"/>
     </owl:ObjectProperty>
@@ -79,6 +90,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#departmentIsInBuilding -->
 
     <owl:ObjectProperty rdf:about="&hospital;departmentIsInBuilding">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a department in which buidling.
+Domain: Department
+Range:Building</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Building"/>
         <rdfs:domain rdf:resource="&hospital;Hospital_Department"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -89,6 +103,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationAtRoom -->
 
     <owl:ObjectProperty rdf:about="&hospital;operationAtRoom">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a operation done in which operation theatre.
+Domain: Operation
+Range:Operating Theatre</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Operating_Theatre"/>
         <rdfs:domain rdf:resource="&hospital;Operation"/>
     </owl:ObjectProperty>
@@ -98,6 +115,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationNeedMedicalStaff -->
 
     <owl:ObjectProperty rdf:about="&hospital;operationNeedMedicalStaff">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a operation need which medical staffs.
+Domain: Operation
+Range:Medical Staff</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Medical_Staff"/>
         <rdfs:domain rdf:resource="&hospital;Operation"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -108,6 +128,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationOnPatient -->
 
     <owl:ObjectProperty rdf:about="&hospital;operationOnPatient">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a operation is on which patient.
+Domain: Operation
+Range:Patient</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Operation"/>
         <rdfs:range rdf:resource="&hospital;Patient"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -118,6 +141,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientHasAnAttendingDoctor -->
 
     <owl:ObjectProperty rdf:about="&hospital;patientHasAnAttendingDoctor">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a patient attended by which doctor
+Domain: Patient
+Range:Doctor</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Doctor"/>
         <rdfs:domain rdf:resource="&hospital;Patient"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -128,6 +154,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientHasOperation -->
 
     <owl:ObjectProperty rdf:about="&hospital;patientHasOperation">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a patient has what operation
+Domain: Patient
+Range:Operation</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Operation"/>
         <rdfs:domain rdf:resource="&hospital;Patient"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -138,6 +167,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientIsInDepartment -->
 
     <owl:ObjectProperty rdf:about="&hospital;patientIsInDepartment">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a patient in which department of hospital.
+Domain: Patient
+Range:Department</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Hospital_Department"/>
         <rdfs:domain rdf:resource="&hospital;Patient"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -148,6 +180,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personIsInHospital -->
 
     <owl:ObjectProperty rdf:about="&hospital;personIsInHospital">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a patient in which hospital.
+Domain: Patient
+Range:Hospital</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Hospital"/>
         <rdfs:domain rdf:resource="&hospital;Person"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -158,6 +193,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomIsInBuilding -->
 
     <owl:ObjectProperty rdf:about="&hospital;roomIsInBuilding">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a room in which building
+Domain: Room
+Range:Building</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Building"/>
         <rdfs:domain rdf:resource="&hospital;Room"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -168,6 +206,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomIsUsedByDepartment -->
 
     <owl:ObjectProperty rdf:about="&hospital;roomIsUsedByDepartment">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a room used by which department.
+Domain: Room
+Range:Department</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Hospital_Department"/>
         <rdfs:domain rdf:resource="&hospital;Room"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -178,6 +219,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#staffIsInDepartment -->
 
     <owl:ObjectProperty rdf:about="&hospital;staffIsInDepartment">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a staff in which department.
+Domain: Staff
+Range:Department</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Hospital_Department"/>
         <rdfs:domain rdf:resource="&hospital;Staff"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -188,6 +232,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#wardHasBeds -->
 
     <owl:ObjectProperty rdf:about="&hospital;wardHasBeds">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a ward has which beds.
+Domain: Ward
+Range:Bed</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Bed"/>
         <rdfs:domain rdf:resource="&hospital;Ward"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -198,6 +245,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#wardIsSupervisedByMedicalStaff -->
 
     <owl:ObjectProperty rdf:about="&hospital;wardIsSupervisedByMedicalStaff">
+        <rdfs:comment rdf:datatype="&rdfs;Literal">this property is to see a ward supervised by which medical staff.
+Domain: Ward
+Range:Medical Staff</rdfs:comment>
         <rdfs:range rdf:resource="&hospital;Medical_Staff"/>
         <rdfs:domain rdf:resource="&hospital;Ward"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -219,6 +269,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#HospitalAddress -->
 
     <owl:DatatypeProperty rdf:about="&hospital;HospitalAddress">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the address of the hospital 
+Domain: Hospital
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Hospital"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -229,6 +282,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#HospitalName -->
 
     <owl:DatatypeProperty rdf:about="&hospital;HospitalName">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the name of a hospital 
+Domain: Hospital
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Hospital"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -239,6 +295,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#HospitalPhone -->
 
     <owl:DatatypeProperty rdf:about="&hospital;HospitalPhone">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the phone of a hospital 
+Domain: Hospital
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Hospital"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -249,6 +308,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#buildingHasName -->
 
     <owl:DatatypeProperty rdf:about="&hospital;buildingHasName">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the name of a building 
+Domain: Building
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Building"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -259,6 +321,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#departmentContactPhone -->
 
     <owl:DatatypeProperty rdf:about="&hospital;departmentContactPhone">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the contact phone of a department 
+Domain: department
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Hospital_Department"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -269,6 +334,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#departmentName -->
 
     <owl:DatatypeProperty rdf:about="&hospital;departmentName">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the name of a department 
+Domain: Department
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Hospital_Department"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -279,6 +347,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#infrastrctureHasId -->
 
     <owl:DatatypeProperty rdf:about="&hospital;infrastrctureHasId">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the id of infrastructure (including building, ward, bed ...)
+Domain: Infrastructure
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Infrastructure"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -289,6 +360,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationDate -->
 
     <owl:DatatypeProperty rdf:about="&hospital;operationDate">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the date of a operation 
+Domain: Operation
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Operation"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -299,6 +373,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#operationId -->
 
     <owl:DatatypeProperty rdf:about="&hospital;operationId">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the id of a operation. 
+Domain: Operation
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Operation"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -309,6 +386,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientAge -->
 
     <owl:DatatypeProperty rdf:about="&hospital;patientAge">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the age of a patient 
+Domain: Patient
+Range:int</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Patient"/>
         <rdfs:range rdf:resource="&xsd;int"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -319,6 +399,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientDatetimeAdmitted -->
 
     <owl:DatatypeProperty rdf:about="&hospital;patientDatetimeAdmitted">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the date of a patient admitted.
+Domain: Patient
+Range:dateTime</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Patient"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -329,6 +412,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientDatetimeDischarged -->
 
     <owl:DatatypeProperty rdf:about="&hospital;patientDatetimeDischarged">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the date of a patient dischanged. 
+Domain: Patient
+Range:dateTime</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Patient"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -339,6 +425,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#patientHeight -->
 
     <owl:DatatypeProperty rdf:about="&hospital;patientHeight">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the height of a patient 
+Domain: Patient
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Patient"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -349,6 +438,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personAddress -->
 
     <owl:DatatypeProperty rdf:about="&hospital;personAddress">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the family address of a person (include patient and staff) 
+Domain: Person
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Person"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -359,6 +451,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personGender -->
 
     <owl:DatatypeProperty rdf:about="&hospital;personGender">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the gender of a person (including patient and staff) 
+Domain: Person
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Person"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -369,6 +464,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personId -->
 
     <owl:DatatypeProperty rdf:about="&hospital;personId">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the id of a person (including patient and staff) 
+Domain: Person
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Person"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -379,6 +477,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personName -->
 
     <owl:DatatypeProperty rdf:about="&hospital;personName">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the name of a person in the hospital (including patient and staff) 
+Domain: Person
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Person"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -389,6 +490,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#personPhone -->
 
     <owl:DatatypeProperty rdf:about="&hospital;personPhone">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the phone of a person in the hospital (including patient and staff) 
+Domain: Person
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Person"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -399,6 +503,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomBedsNum -->
 
     <owl:DatatypeProperty rdf:about="&hospital;roomBedsNum">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the number of beds in a  room.
+Domain: Room
+Range:int</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Room"/>
         <rdfs:range rdf:resource="&xsd;int"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -409,6 +516,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#roomSize -->
 
     <owl:DatatypeProperty rdf:about="&hospital;roomSize">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the size of a room in the hospital
+Domain: Room
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Room"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
@@ -419,6 +529,9 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <!-- http://www.semanticweb.org/leizhang/ontologies/2017/3/hospital#specialityName -->
 
     <owl:DatatypeProperty rdf:about="&hospital;specialityName">
+        <rdfs:comment rdf:datatype="&xsd;string">this property is to get the name of a medical speciality. 
+Domain: Medical Speciality
+Range:string</rdfs:comment>
         <rdfs:domain rdf:resource="&hospital;Medical_Speciality"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -441,6 +554,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Administrator">
         <rdfs:label rdf:datatype="&rdfs;Literal">Administrator</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Staff"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">not medical staff, just administrator.</rdfs:comment>
     </owl:Class>
     
 
@@ -472,6 +586,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Anaesthetist">
         <rdfs:label rdf:datatype="&rdfs;Literal">Anaesthetist</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Doctor"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">An anaesthetist is a doctor who specializes in giving anaesthetics to patients.</rdfs:comment>
     </owl:Class>
     
 
@@ -501,6 +616,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Cardiologist">
         <rdfs:label rdf:datatype="&rdfs;Literal">Cardiologist</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Doctor"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal"> A cardiologist is a doctor who specializes in the heart and its diseases.</rdfs:comment>
     </owl:Class>
     
 
@@ -555,7 +671,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Consultation">
         <rdfs:label rdf:datatype="&rdfs;Literal">Consultation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Medical_Procedure"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Consultation</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Consultation, not need operations.</rdfs:comment>
     </owl:Class>
     
 
@@ -575,6 +691,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Doctor">
         <rdfs:label rdf:datatype="&rdfs;Literal">Doctor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Medical_Staff"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">Doctor comprise of anaesthetist, cardiologist, gynecologist, radiologist, surgeon.</rdfs:comment>
     </owl:Class>
     
 
@@ -642,6 +759,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;In-Patient">
         <rdfs:label rdf:datatype="&rdfs;Literal">In-Patitent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Patient"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">An inpatient is someone who stays in a hospital while they receive their treatment.</rdfs:comment>
     </owl:Class>
     
 
@@ -659,7 +777,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
 
     <owl:Class rdf:about="&hospital;Medical_Procedure">
         <rdfs:label rdf:datatype="&rdfs;Literal">Medical Procedure</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string">Medical Procedure </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Medical Procedures, includes consultation and Operation.</rdfs:comment>
     </owl:Class>
     
 
@@ -668,7 +786,8 @@ lz5y15@soton.ac.uk</rdfs:comment>
 
     <owl:Class rdf:about="&hospital;Medical_Speciality">
         <rdfs:label rdf:datatype="&rdfs;Literal">Medical Speciality</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string">Medical Speciality</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Medical Speciality includes:
+Anesthesiology, Cardiology, Diagnostic Imaging, General Surgery,Gynaecology,...</rdfs:comment>
     </owl:Class>
     
 
@@ -678,6 +797,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Medical_Staff">
         <rdfs:label rdf:datatype="&rdfs;Literal">Medical Staff</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Staff"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">medical staff of the hospital, including doctor and nurse.</rdfs:comment>
     </owl:Class>
     
 
@@ -714,7 +834,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&hospital;Ward"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Mix Gender Ward</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Mix Gender Ward in which the beds can be used by Male or Female.</rdfs:comment>
     </owl:Class>
     
 
@@ -769,6 +889,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Nurse">
         <rdfs:label rdf:datatype="&rdfs;Literal">Nurse</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Medical_Staff"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">A nurse is a person whose job is to care for people who are ill.</rdfs:comment>
     </owl:Class>
     
 
@@ -798,7 +919,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Operation">
         <rdfs:label rdf:datatype="&rdfs;Literal">Operation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Medical_Procedure"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Operation</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Operation includes Anaesthetic operation and Non-Anaesthetic operation.</rdfs:comment>
     </owl:Class>
     
 
@@ -808,6 +929,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Out-Patient">
         <rdfs:label rdf:datatype="&rdfs;Literal">Out-Patient</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Patient"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">An inpatient is someone who no need stays in a hospital.</rdfs:comment>
     </owl:Class>
     
 
@@ -817,6 +939,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Patient">
         <rdfs:label rdf:datatype="&rdfs;Literal">Patient</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Person"/>
+        <rdfs:comment>Patient includes in-patient and out-patient.</rdfs:comment>
     </owl:Class>
     
 
@@ -858,6 +981,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Radiologist">
         <rdfs:label rdf:datatype="&rdfs;Literal">Radiologist</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Doctor"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">A radiologist is a doctor who is trained in radiology</rdfs:comment>
     </owl:Class>
     
 
@@ -877,6 +1001,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Staff">
         <rdfs:label rdf:datatype="&rdfs;Literal">Staff</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Person"/>
+        <rdfs:comment>staff of the hospital, including administrator and medical staff.</rdfs:comment>
     </owl:Class>
     
 
@@ -886,6 +1011,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;Surgeon">
         <rdfs:label rdf:datatype="&rdfs;Literal">Surgeon</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Doctor"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">A surgeon is a doctor who is specially trained to perform surgery. </rdfs:comment>
     </owl:Class>
     
 
@@ -904,6 +1030,7 @@ lz5y15@soton.ac.uk</rdfs:comment>
     <owl:Class rdf:about="&hospital;gynecologist">
         <rdfs:label rdf:datatype="&rdfs;Literal">Gynecologist</rdfs:label>
         <rdfs:subClassOf rdf:resource="&hospital;Doctor"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">a physician specializing in gynecology.</rdfs:comment>
     </owl:Class>
     
 
